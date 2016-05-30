@@ -176,7 +176,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Analysing-Customer-Segments">Analysing Customer Segments<a class="anchor-link" href="#Analysing-Customer-Segments">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/oliya">Armin Oliya</a>, May 2016</p>
+<h1 id="Analysing-Customer-Segments-of-a-Wholesale-Distributor">Analysing Customer Segments of a Wholesale Distributor<a class="anchor-link" href="#Analysing-Customer-Segments-of-a-Wholesale-Distributor">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/oliya">Armin Oliya</a>, May 2016</p>
 
 </div>
 </div>
@@ -186,7 +186,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this project, we will analyze a dataset containing data on various customers' annual spending amounts (reported in <em>monetary units</em>) of diverse product categories for internal structure. One goal of this project is to best describe the variation in the different types of customers that a wholesale distributor interacts with. Doing so would equip the distributor with insight into how to best structure their delivery service to meet the needs of each customer.</p>
+<p>As a business owner, it is always desirable to know what groups of customers you're dealing with, be it in terms of spending patterns, retention, or similar factors. This could help you with tailoring your product or service, branding, marketing and eventually, customer satisfaction.</p>
+<p>In this project we will apply unsupervised learning techniques on product spending data collected for customers of a wholesale distributor in Lisbon, Portugal to identify customer segments hidden in the data. We will first explore the data by selecting a small subset to sample and determine if any product categories highly correlate with one another. Afterwards, we will preprocess the data by scaling each product category and then identifying (and removing) unwanted outliers. With the good, clean customer spending data, we will apply PCA transformations to the data and implement clustering algorithms to segment the transformed customer data. Finally, we will compare the segmentation found with an additional labeling and consider ways this information could assist the wholesale distributor with future service changes.</p>
 <p>The dataset for this project can be found on the <a href="https://archive.ics.uci.edu/ml/datasets/Wholesale+customers">UCI Machine Learning Repository</a>. For the purposes of this project, the features <code>'Channel'</code> and <code>'Region'</code> will be excluded in the analysis — with focus instead on the six product categories recorded for customers.</p>
 <p>Let's load the dataset first:</p>
 
@@ -9235,7 +9236,7 @@ rp5lgQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="What's-Next?">What's Next?<a class="anchor-link" href="#What's-Next?">&#182;</a></h2><p>In this project we studied the customer segments of a wholesales supplier. We started by understanding the underlying distribution of the data, and moved on to cleaning outliers, reducing features and finally clustering customers based on their spending profile.</p>
-<p>As a business owner, it is always desirable to know what groups of customers you're dealing with, be it in terms of spending patterns, retention, or other behaviour. This could help you with tayloring your product or service, branding, marketing and customer service. For example, if the wholesale distributor wanted to change its delivery service from 5 days a week to 3 days a week, it could run an AB test on either cluster first to ensure it's suitability for that customer segment. After all, different segments have different needs and could react differently to a business decision.</p>
+<p>As a business owner, it is always desirable to know what groups of customers you're dealing with, be it in terms of spending patterns, retention, or similar factors. This could help you with tailoring your product or service, branding, marketing and eventually, customer satisfaction. For example, if the wholesale distributor wanted to change its delivery service from 5 days a week to 3 days a week, it could run an AB test on either cluster first to ensure it's suitability for that customer segment. After all, different segments have different needs and could react differently to a business decision.</p>
 <p>With the new clustering assignments for each customer, we have alos engineered a new feature for the dataset. In some sense, alongside the six product features, we now have a cluster label feature which helps segment certain customers from one another. Now that we know customers are assigned to a specific cluster, we can use that new feature as an additional input feature to a supervised learner.</p>
 <p>Going back to the delivery schedule experiment, we could try to predict a binary classification variable that relates to the new delivery scheme (0 - negatively affects customer; 1 - positively affects customer). From the A/B tests, we could certainly collect this information and then use it to predict future customers if we knew what cluster they would be assigned.</p>
 <p>One thing to note is that we looked at a snapshot of data along the continous timeline of customer spendings. It would be quite interesting to see how the segments we identified evolve throughout the time. Could they unify, diverge, or even split in holiday season?</p>
