@@ -1,4 +1,11 @@
-# Creating Customer Segments through Unsupervised Learning
+## Creating Customer Segments through Unsupervised Learning
+
+
+In this project, we will analyze a dataset containing data on various customers' annual spending amounts (reported in monetary units) of diverse product categories for internal structure. One goal of this project is to best describe the variation in the different types of customers that a wholesale distributor interacts with. Doing so would equip the distributor with insight into how to best structure their service to meet the needs of each customer.
+
+Open customer_segments.ipynb on github.com for a read-only view of the analysis. 
+
+
 
 ### Install
 
